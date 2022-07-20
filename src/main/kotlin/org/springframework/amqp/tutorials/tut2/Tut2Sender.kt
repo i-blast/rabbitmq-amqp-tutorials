@@ -10,9 +10,10 @@ class Tut2Sender(
     private val queue: Queue,
 ) {
 
-    private val dots = AtomicInteger(0)
-
-    private val count = AtomicInteger(0)
+    companion object {
+        private val dots = AtomicInteger(0)
+        private val count = AtomicInteger(0)
+    }
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     fun send() {
